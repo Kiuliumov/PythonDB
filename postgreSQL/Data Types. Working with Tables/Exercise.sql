@@ -1,3 +1,7 @@
+
+
+
+
 CREATE DATABASE minions_db;
 
 CREATE TABLE minions (
