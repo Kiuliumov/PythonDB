@@ -1,3 +1,5 @@
+-- https://judge.softuni.org/Contests/Practice/Index/4100#1
+
 CREATE TABLE employees(
 id serial PRIMARY KEY not null,
 first_name VARCHAR(30),
