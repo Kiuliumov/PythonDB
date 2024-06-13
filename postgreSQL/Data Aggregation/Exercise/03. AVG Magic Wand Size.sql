@@ -1,0 +1,1 @@
+SELECT AVG(magic_wand_size)::NUMERIC(10,3) FROM wizard_deposits;
