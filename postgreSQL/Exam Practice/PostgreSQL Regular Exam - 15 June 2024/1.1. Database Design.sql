@@ -15,7 +15,7 @@ CREATE TABLE addresses(
     street VARCHAR(30) NOT NULL,
     town VARCHAR(30) NOT NULL,
     country VARCHAR(30) NOT NULL,
-    account_id INT REFERENCES accounts(id) ON DELETE CASCADE
+    account_id INT REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -31,13 +31,13 @@ CREATE TABLE comments(
     id SERIAL PRIMARY KEY,
     content VARCHAR(255) NOT NULL,
     published_on TIMESTAMP NOT NULL,
-    photo_id INT REFERENCES photos(id) ON DELETE CASCADE
+    photo_id INT REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
 CREATE TABLE accounts_photos(
-    account_id INT REFERENCES accounts(id) ON DELETE CASCADE,
-    photo_id INT REFERENCES photos(id) ON DELETE CASCADE,
+    account_id INT REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    photo_id INT REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE,
 
     CONSTRAINT pk_accounts_photos PRIMARY KEY (account_id, photo_id)
 );
