@@ -11,7 +11,7 @@ SELECT
     END AS subtitles,
     COUNT(pa.actor_id) AS actor_count
 FROM productions AS p
-LEFT JOIN productions_actors AS pa ON pa.production_id = p.id
-LEFT JOIN productions_info AS pi ON pi.id = p.production_info_id
+    LEFT JOIN productions_actors AS pa ON pa.production_id = p.id
+    LEFT JOIN productions_info AS pi ON pi.id = p.production_info_id
 GROUP BY p.title, pi.rating, pi.has_subtitles
 ORDER BY rating ASC, actor_count DESC, p.title ASC;

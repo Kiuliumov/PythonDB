@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION fn_count_employees_by_town(town_name VARCHAR)
 RETURNS INT AS
-DECLARE e_count INT;
 $$
+    DECLARE e_count INT;
     BEGIN
         SELECT COUNT(employee_id) INTO e_count
         FROM employees AS e
