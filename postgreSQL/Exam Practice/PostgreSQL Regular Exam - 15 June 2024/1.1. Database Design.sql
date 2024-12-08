@@ -15,7 +15,7 @@ CREATE TABLE addresses(
     street VARCHAR(30) NOT NULL,
     town VARCHAR(30) NOT NULL,
     country VARCHAR(30) NOT NULL,
-    account_id INT REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE
+    account_id INT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
@@ -31,21 +31,21 @@ CREATE TABLE comments(
     id SERIAL PRIMARY KEY,
     content VARCHAR(255) NOT NULL,
     published_on TIMESTAMP NOT NULL,
-    photo_id INT REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE
+    photo_id INT NOT NULL REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
 CREATE TABLE accounts_photos(
-    account_id INT REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    photo_id INT REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    account_id INT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    photo_id INT NOT NULL REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE,
 
     CONSTRAINT pk_accounts_photos PRIMARY KEY (account_id, photo_id)
 );
 
 CREATE TABLE likes(
     id SERIAL PRIMARY KEY,
-    photo_id INT REFERENCES photos(id),
-    account_id INT REFERENCES accounts(id)
+    photo_id INT NOT NULL REFERENCES photos(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    account_id INT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
 
