@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/postgreSQL/Exam Practice/PostgreSQL Exam - 14 October 2023/4.10. Player Team Finder.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/postgreSQL/Exam Practice/PostgreSQL Regular Exam - 15 June 2024/1.1. Database Design.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/postgreSQL/Exam Practice/PostgreSQL Regular Exam - 15 June 2024/2.2. Insert .sql" dialect="GenericSQL" />
+  </component>
+</project>
