@@ -1,0 +1,1 @@
+SELECT id, last_name, loyalty_card FROM customers WHERE LOWER(last_name) LIKE '%m%' AND loyalty_card = TRUE ORDER BY id
