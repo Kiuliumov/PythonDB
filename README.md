@@ -1,5 +1,5 @@
 # Python DB - January 2025
-
+![SoftUni](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPFFqCRmlA9SmIQQd1_wUfKfApvbzcbSubQ&usqp=CAU)
 This repository contains my work and completed exercises from the **Python DB** module at SoftUni (January 2025 session).
 
 During this module, I gained practical experience in working with relational databases using **PostgreSQL** and applied **Object-Relational Mapping (ORM)** techniques in Python through **Django** and **SQLAlchemy**.  
